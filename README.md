@@ -27,7 +27,7 @@ $ docker build \
   -f ./Dockerfile .
 ```
 
-Run container.
+Run the container.
 
 ```
 $ docker run --name=py -it takimotok/ubuntu:18.04 /bin/bash
