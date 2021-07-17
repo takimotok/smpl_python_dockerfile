@@ -13,6 +13,22 @@ The Docker file :
   - python
   - pip
 - set working directory as `/app`
-- mounts `index.py` into `/app/here`
+- mount `index.py` into `/app/here`
 
 
+## Usage
+
+Build the image.
+
+```
+$ docker build \
+  --no-cache \
+  -t takimotok/ubuntu:18.04 \
+  -f ./Dockerfile .
+```
+
+Run container.
+
+```
+$ docker run --name=py -it takimotok/ubuntu:18.04 /bin/bash
+```
