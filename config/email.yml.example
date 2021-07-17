@@ -1,0 +1,13 @@
+smtp:
+    host: smtp.gmail.com
+    port: 587
+from:
+    email: sample+from@gmail.com
+to:
+    email: sample+to@gmail.com
+user:
+    account: sample_gmail_account
+    password: sample_password
+    application_password: sample_application_password
+    email: sample+email@gmail.com
+
