@@ -5,6 +5,7 @@ LABEL updated_at="2021-07-17" maintainer="takimotok"
 RUN apt-get update && apt-get install -y --no-install-recommends \
   python3.7 \
   python3-pip \
+  sqlite3 \
   vim
 
 # set aliases
