@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # set aliases
 RUN echo "alias vi=/usr/bin/vim" >> ~/.bashrc && \
     echo "alias python=/usr/bin/python3.7"  >> ~/.bashrc && \
-    echo "alias pip=/usr/bin/pip3" >> ~/.bashrc
+    echo "alias pip=/usr/bin/pip3" >> ~/.bashrc && \
+    echo "alias sqlite=/usr/bin/sqlite3" >> ~/.bashrc
 
 # set application files and change working dir.
 RUN mkdir -p /app
