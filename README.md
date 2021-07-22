@@ -30,9 +30,5 @@ $ docker build \
 Run the container.
 
 ```
-$ docker run --name=py -it takimotok/ubuntu:18.04 /bin/bash
-
-# or
-
 $ docker run -v $(pwd)/:/app/ --name=py -it takimotok/ubuntu:18.04 /bin/bash
 ```
