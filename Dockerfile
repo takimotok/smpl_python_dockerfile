@@ -31,7 +31,6 @@ RUN python3.7 -m pip install -U pip && \
   mysql-connector-python \
   python-memcached \
   requests && \
-  service mysql start && \
   export PYTHONPATH="/usr/local/lib/python3/dist-packages:$PYTHONPATH" >> ~/.bashrc && \
   echo "alias vi=/usr/bin/vim" >> ~/.bashrc && \
   echo "alias python=/usr/bin/python3.7"  >> ~/.bashrc && \
