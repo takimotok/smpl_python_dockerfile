@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
-LABEL updated_at="2021-07-17" maintainer="takimotok"
+LABEL updated_at="2021-10-28" maintainer="takimotok"
+
+# python env. variables
+ENV PYTHONPATH=/usr/local/lib/python3/dist-packages:/app:$PYTHONPATH
 
 # install libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -27,16 +30,16 @@ RUN python3.7 -m pip install -U pip && \
   Flask \
   PyMySQL \
   SQLAlchemy \
+  bs4 \
   happybase \
+  lxml \
   mysql-connector-python \
+  pytest \
   python-memcached \
   requests && \
-  export PYTHONPATH="/usr/local/lib/python3/dist-packages:$PYTHONPATH" >> ~/.bashrc && \
   echo "alias vi=/usr/bin/vim" >> ~/.bashrc && \
   echo "alias python=/usr/bin/python3.7"  >> ~/.bashrc && \
   echo "alias sqlite=/usr/bin/sqlite3" >> ~/.bashrc
 
-# set application files and change working dir.
 RUN mkdir -p /app
-COPY ./index.py /app
 WORKDIR /app
