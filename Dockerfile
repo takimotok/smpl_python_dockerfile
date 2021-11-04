@@ -2,7 +2,8 @@ FROM ubuntu:18.04
 LABEL updated_at="2021-10-28" maintainer="takimotok"
 
 # python env. variables
-ENV PYTHONPATH=/usr/local/lib/python3/dist-packages:/app:$PYTHONPATH
+ENV PYTHONPATH=/usr/local/lib/python3/dist-packages:/app:$PYTHONPATH \
+  PYTHONDONTWRITEBYTECODE=1
 
 # install libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
