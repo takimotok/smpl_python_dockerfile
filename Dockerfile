@@ -36,8 +36,11 @@ RUN python3.7 -m pip install -U pip && \
   lxml \
   mysql-connector-python \
   pytest \
+  pytest-cov \
+  pytest-xdist \
   python-memcached \
-  requests && \
+  requests \
+  setuptools && \
   echo "alias vi=/usr/bin/vim" >> ~/.bashrc && \
   echo "alias python=/usr/bin/python3.7"  >> ~/.bashrc && \
   echo "alias sqlite=/usr/bin/sqlite3" >> ~/.bashrc
